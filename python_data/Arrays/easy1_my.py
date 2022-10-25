@@ -1,8 +1,16 @@
-import array
+from array import array
 import math
 
+# time complexity of the given code would be (O(n**2) - Quadratic 
+# The following algorithm passed only 16 test cases
+# It fails when there are repeated elements as a result it does not give the accurate index.
 
-# sum of subarray
+# Function to find a continuous sub-array which adds up to a given number.
+
+# Input: arr[] = {1, 4, 20, 3, 10, 5}, sum = 33
+# Output: Sum found between indexes 2 and 4
+# Explanation: Sum of elements between indices 2 and 4 is 20 + 3 + 10 = 33
+
 class Solution:
     def subArraySum(self,arr, n, s): 
         self.arr = arr
