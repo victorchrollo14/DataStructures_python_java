@@ -3,10 +3,10 @@ import array
 
 # array CRUD
 # initializing array with values
-arr = array.array('i', [1, 2, 3])
+arr = array.array('i', [1, 2, 3])          # creating array
 
 # printing the original array
-print(f'The newly created array: ', end=" ")
+print(f'The newly created array: ', end=" ")          # reading the array
 for i in arr:
     print(i, end=" ")
 
@@ -16,7 +16,7 @@ for i in arr:
 # insert(index, value) - it is used insert an element at a given index.
 
 # using append
-arr.append(4)
+arr.append(4)                                                # updating array
 
 print(f"\n\nthe array after appending: ", end=" ")
 for i in arr:
@@ -24,7 +24,7 @@ for i in arr:
 
 # using insert()
 # inserting 8 at 3rd position
-arr.insert(3, 8)
+arr.insert(3, 8)                                               # updating array
 
 print("\n\nThe array after inserting value: ", end=" ")
 for i in arr:
@@ -36,7 +36,7 @@ for i in arr:
 # remove() - It removes the first occurance of the element mentioned in its parameter.
 
 # using pop()
-arr.pop(1)
+arr.pop(1)                                                               # delete operation 
 
 print("\n\nThe array after pop operaion: ", end=" ")
 for i in arr:
@@ -45,7 +45,7 @@ for i in arr:
 # using remove()
 arr.append(1)
 # removes the first occurance of 1
-arr.remove(1)
+arr.remove(1)                                                               # DELETE OPERATION
 
 print("\n\nThe array after remove operation: ", end=" ")
 for i in arr:
@@ -54,7 +54,7 @@ for i in arr:
 # index() - It returns the index of the first occurance of the mention value.
 # reverse() - It reverses the array
 
-print(f"\n\nindex of 1: {arr.index(1)}")
+print(f"\n\nindex of 1: {arr.index(1)}")                                           # SEARCH OPERATION
 
 arr.reverse()
 print(f"\nThe array after reversing: ", end=" ")
