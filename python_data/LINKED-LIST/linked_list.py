@@ -26,7 +26,7 @@ class LinkedList:
         while (temp):
             print(temp.data, end=" ")
             temp = temp.next
-    
+
     def Delete_list(self):
         pass
 
@@ -36,7 +36,7 @@ if __name__ == "__main__":
     llist = LinkedList()
     llist.head = Node(1)
 
-    first =  llist.head
+    first = llist.head
     second = Node(2)
     third = Node(3)
 
@@ -44,7 +44,7 @@ if __name__ == "__main__":
     Three nodes have been created.
     We have references to these three blocks as head,
     second and third
-  
+
     llist.head        second              third
          |                |                  |
          |                |                  |
@@ -59,13 +59,14 @@ if __name__ == "__main__":
     '''
     Now next of first Node refers to second.  So they
     both are linked.
-  
+
     llist.head        second              third
          |                |                  |
          |                |                  |
     +----+------+     +----+------+     +----+------+
     | 1  |  o-------->| 2  | null |     |  3 | null |
-    +----+------+     +----+------+     +----+------+ 
+    +----+------+     +----+------+     +----+------+
+
     '''
 
     second.next = third  # linking the second node with third
@@ -73,18 +74,17 @@ if __name__ == "__main__":
     '''
     Now next of first Node refers to second.  So they
     both are linked.
-  
+
     llist.head        second              third
          |                |                  |
          |                |                  |
     +----+------+     +----+------+     +----+------+
     | 1  |  o-------->| 2  |   o------->|  3 | null |
-    +----+------+     +----+------+     +----+------+ 
+    +----+------+     +----+------+     +----+------+
     '''
     print("elements of linkedlist: ")
     llist.PrintList()
     print('\n')
-    
 
     # INSERTION OPERATION
     # Insertion at the beginning of node
@@ -119,7 +119,23 @@ if __name__ == "__main__":
     llist.head = llist.head.next        # shifting the head from node1(new_node) -----> node2(first)
     
     print("\n")
+    print("The Linkedlist after deleting the element at head")
     llist.PrintList()
+
+    # Deletion at the end
+    third.next = end_node.next          # changing the address of the node before last node to null.
+
+    print("\n")
+    print("The node after deleting the end node: ")
+    llist.PrintList()
+
+    # Deletion at the middle
+    # Change the address node before middle_node to the address of node that comes after middle_node
+    first.next = middle_node.next   
+
+    print("\n")
+    print("The node after deleting the middle node: ")
+    llist.PrintList()        
 
     
 
