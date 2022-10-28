@@ -30,6 +30,18 @@ class LinkedList:
     def Delete_list(self):
         pass
 
+    def search_list(self, key):
+        temp = self.head
+        i = 0
+        while (temp):
+            if (str(temp.data) == key):
+                print(f"{key} found at the index {i}")
+                break
+            temp = temp.next
+            i += 1
+            
+
+
 
 if __name__ == "__main__":
     # Creating an instance of LinkedList class
@@ -113,6 +125,10 @@ if __name__ == "__main__":
     print("The linked list after insertion at the end: ")
     llist.PrintList()
 
+    # Search Operation 
+    print("\n")
+    key = input("Enter the item you want to search:  ")
+    llist.search_list(key)
 
     # Deletion Operation
     # Deletion at the head  (by moving the head form node1 to node2 , node1 gets deleted)
@@ -136,6 +152,7 @@ if __name__ == "__main__":
     print("\n")
     print("The node after deleting the middle node: ")
     llist.PrintList()        
+    
 
     
 
