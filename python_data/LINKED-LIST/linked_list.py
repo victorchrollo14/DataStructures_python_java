@@ -26,12 +26,17 @@ class LinkedList:
         while (temp):
             print(temp.data, end=" ")
             temp = temp.next
+    
+    def Delete_list(self):
+        pass
 
 
 if __name__ == "__main__":
+    # Creating an instance of LinkedList class
     llist = LinkedList()
-
     llist.head = Node(1)
+
+    first =  llist.head
     second = Node(2)
     third = Node(3)
 
@@ -76,9 +81,9 @@ if __name__ == "__main__":
     | 1  |  o-------->| 2  |   o------->|  3 | null |
     +----+------+     +----+------+     +----+------+ 
     '''
-
+    print("elements of linkedlist: ")
     llist.PrintList()
-    print()
+    print('\n')
     
 
     # INSERTION OPERATION
@@ -86,8 +91,41 @@ if __name__ == "__main__":
     new_node = Node("new")                    # Create a new node
     new_node.next = llist.head                # point the address of new node to current head
     llist.head = new_node                     # assign new_node as the head
-
+    
+    print("New linkedlist after Insertion of new node at the head:")
     llist.PrintList()
+
+    # Insertion at the middle
+    middle_node = Node("mid")                 # create a new node
+    middle_node.next = second                 # point the address towards the next node
+    first.next = middle_node                  # point the address of previous node to middle_node
+     
+    print('\n')
+    print("Linked list after insertion at the middle: ")
+    llist.PrintList()
+
+    # Insertion at the end
+    end_node = Node("end")
+    end_node.next = None
+    third.next = end_node
+
+    print("\n")
+    print("The linked list after insertion at the end: ")
+    llist.PrintList()
+
+
+    # Deletion Operation
+    # Deletion at the head  (by moving the head form node1 to node2 , node1 gets deleted)
+    llist.head = llist.head.next        # shifting the head from node1(new_node) -----> node2(first)
+    
+    print("\n")
+    llist.PrintList()
+
+    
+
+    
+    
+
 
 
 
