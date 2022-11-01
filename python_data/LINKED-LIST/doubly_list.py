@@ -12,6 +12,7 @@ class DoubleLlist:
         self.head = None
     
     def print_list(self):
+        # Reading the linked list
         temp = self.head
         while (temp):
             print(temp.data, end=" ")
@@ -33,7 +34,7 @@ if __name__ == "__main__":
 
     # Linking the nodes 
     dlist.head.prev = None
-    dlist.head.next = second      # linking first to second 
+    first.next = second      # linking first to second 
 
     second.prev = first        # linking second to first
     second.next = third        # linking seond to third
@@ -44,6 +45,36 @@ if __name__ == "__main__":
     fourth.prev = third       # linking fourth to third
     fourth.next = None      
 
+    print("Initial Doubly linked list:")
     dlist.print_list()
+    print("\n")
+
+    # UPDATE OPERATION
+    # Insertion at the beginning 
+    new_node = Node("new")
+    dlist.head.prev = new_node           # Link prev of current head to new node
+    dlist.head = new_node                # assigning new node as head
+    new_node.next = first                # linking next of new node to first
+
+
+    print("Inserting new element at the head: ")
+    dlist.print_list()
+    print("\n")
+
+    # Insertion at the middle
+    mid_node = Node("mid")
+    second.next = mid_node              # linking next of second to mid node
+    mid_node.prev = second              # linking prev of mid_node to second
+    mid_node.next = third               # linking next of mid_node to third
+    third.prev = mid_node               # linking prev of third node to mid_node
+
+    print("Inserting new element at the middle: ")
+    dlist.print_list()
+    print("\n")
+
+    
+
+
+
 
 
