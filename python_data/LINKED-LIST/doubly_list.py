@@ -18,6 +18,15 @@ class DoubleLlist:
             print(temp.data, end=" ")
             temp = temp.next
     
+    def search(self, key):
+        temp = self.head
+        i = 0
+        while (temp):
+            if(str(temp.data) == key):
+                print(f"{key} found at index {i}")
+            temp = temp.next
+            i += 1
+        
         
 
 
@@ -71,6 +80,51 @@ if __name__ == "__main__":
     print("Inserting new element at the middle: ")
     dlist.print_list()
     print("\n")
+
+    # Insertion at the end
+    end_node = Node("end")
+    fourth.next = end_node            # linking next of fourth to end_node
+    end_node.prev = fourth            # Linking prev of end_node to fourth
+    end_node.next = None              # Linking next of end_node to None
+
+    print("Inserting new element at the end: ")
+    dlist.print_list()
+    print("\n")
+    
+    # SEARCH OPERATION
+    key = input("Enter the element to search: ")
+    dlist.search(key)
+    print("\n")
+
+
+    # DELETE OPERATION
+    # Deleting at the beginning 
+    dlist.head = first                # Changing the head new_node to first
+
+    print("Deleting at the beginning: ")
+    dlist.print_list()
+    print("\n")
+
+    # Deleting at the middle
+    second.next = third                     # linking the next of second to third
+    third.prev = second                     # Linking the prev of third to next (mid_node gets deleted)
+
+    print("Deleting at the middle: ")
+    dlist.print_list()
+    print("\n")
+
+    # Deleting at the End
+    fourth.next = end_node.next           # Linking next of fourth to None
+    end_node.prev = None                  # Linking prev of end_node to none
+
+    print("Deleting at the end: ")
+    dlist.print_list()
+    print("\n")
+
+    
+
+
+
 
     
 
