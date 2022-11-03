@@ -62,6 +62,16 @@ class CircularLlist:
                 temp = temp.next   
                 n1 = temp.next                    
 
+    def search(self, value):
+        temp = self.head
+        i = 0
+        while (temp):
+            if (str(temp.data) == value):
+                print(f"{value} found at index {i}")
+                break
+            i += 1
+            temp = temp.next
+
 
 
     def print_list(self):
@@ -82,6 +92,8 @@ clist.prepend("hi")
 clist.append("hello")
 clist.print_list()
 print("\n")
+src_key = input("enter the element to search: ")
+clist.search(src_key)
 key = input("enter the element to delete: ")
 clist.delete(key)
 clist.print_list()
