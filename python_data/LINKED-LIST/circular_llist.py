@@ -72,8 +72,6 @@ class CircularLlist:
             i += 1
             temp = temp.next
 
-
-
     def print_list(self):
         temp = self.head
         while (temp):
