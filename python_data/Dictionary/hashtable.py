@@ -60,7 +60,5 @@ def dictionary_implementation():
     print("dictionary after deletion: ")
     print(hash_table)
 
-
-
 dictionary_implementation()
     
