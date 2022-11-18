@@ -1,10 +1,23 @@
 
 
 """     
-        Time Complexity:
+        Time and Space Complexity:  
 
-        Memory index access takes constant time and hashing takes constant time. 
-        Hence, the search complexity of a hash map is also constant time, that is, O(1).      
+For open addressing:
+
+ACTIVITY	        BEST CASE COMPLEXITY	AVERAGE CASE COMPLEXITY  	WORST CASE COMPLEXITY
+Searching	            O(1)	            O(1)	                    O(n)
+Insertion	            O(1)	            O(1)	                    O(n)
+Deletion	            O(1)	            O(1)	                    O(n)
+Space Complexity	    O(n)	            O(n)	                    O(n)     
+
+for close addressing(chaining):
+
+ACTIVITY	        BEST CASE COMPLEXITY	AVERAGE CASE COMPLEXITY	    WORST CASE COMPLEXITY
+Searching	            O(1)	            O(1)	                    O(n)
+Insertion	            O(1)	            O(1)	                    O(n)
+Deletion	            O(1)	            O(1)	                    O(n)
+Space Complexity	    O(m+n)	            O(m+n)	                    O(m+n)
 
 """
 

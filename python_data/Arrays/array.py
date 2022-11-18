@@ -1,3 +1,21 @@
+"""
+Time complexity of various operations on arrays.
+
+ARRAY OPERATION	            REAL TIME COMPLEXITY	|   ASSUMED TIME COMPLEXITY
+Access i-th element	            O(√N)	            |       O(1)
+Traverse all elements	        O(N + √N)	        |       O(N)
+Override element at i-th index	O(√N)	            |       O(1)
+Insert element E	            O(N + √N)           |       O(N)
+Delete element E	            O(N + √N)           |       O(N)
+
+"""
+
+
+
+
+
+
+
 import array
 
 
