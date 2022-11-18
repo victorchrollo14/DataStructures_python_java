@@ -1,4 +1,18 @@
 
+"""
+    Time and Space Complexity:
+
+OPERATION	BEGINNING	END	    OTHER POSITIONS
+Insertion	O(1)	    O(1)	O(n)
+Deletion	O(1)	    O(n)	O(n)
+
+Traveral: O(n)   
+
+"""
+
+
+
+
 
 class Node:
     def __init__(self, data):

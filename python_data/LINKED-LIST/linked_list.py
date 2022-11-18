@@ -1,7 +1,20 @@
 # CRUD OPERATIONS ON LINKED LIST
 # SEARCH OPERATION
 
-''' Construction of a simple linked list with three nodes '''
+"""
+    Time and Space Complexity:
+
+SINGLY LINKED LIST OPERATION	    REAL TIME COMPLEXITY	ASSUMED TIME COMPLEXITY
+Access i-th element	                O(√N * N)	            O(N)
+Traverse all elements	            O(√N * N)	            O(N)
+Insert element E at current point	O(1)	                O(1)
+Delete current element	            O(1)	                O(1)
+Insert element E at front	        O(1)	                O(1)
+Insert element E at end	            O(√N * N)	            O(N)
+
+Space complexity O(N)
+
+"""
 
 
 # Node class
