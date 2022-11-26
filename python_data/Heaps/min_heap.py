@@ -66,7 +66,7 @@ class MinHeap:
         return (2 * index) + 2
 
     def has_right(self, index):
-        return self.storage[(2*index) + 1] is not None
+        return self.storage[(2*index) + 2] is not None
 
     def has_parent(self, index):
         return self.parent_index(index) >= 0
@@ -84,7 +84,7 @@ class MinHeap:
             raise("insufficient capacity")
         self.storage[self.size] = data
         self.size += 1
-        self. heapify_up()
+        self.heapify_up()
     
     def  heapify_up(self):
         index = self.size - 1
